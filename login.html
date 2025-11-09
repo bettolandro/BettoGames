@@ -1,0 +1,65 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <title>BettoGames | Iniciar sesión</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link href="css/styles.css" rel="stylesheet">
+</head>
+<body data-page="login">
+  <!-- Navbar -->
+  <nav class="navbar navbar-expand-lg border-bottom border-light-subtle">
+    <div class="container">
+      <a class="navbar-brand fw-bold" href="index.html">BettoGames</a>
+      <button class="navbar-toggler text-white" type="button" data-bs-toggle="collapse" data-bs-target="#nav">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div id="nav" class="collapse navbar-collapse">
+        <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+          <li class="nav-item"><a class="nav-link" href="index.html">Catálogo</a></li>
+          <li class="nav-item"><a class="nav-link d-none" data-link-admin href="admin.html">Admin</a></li>
+        </ul>
+        <div class="d-flex align-items-center gap-2">
+          <span class="chip">Usuario: <span data-user-name>Invitado</span></span>
+          <a class="btn btn-sm btn-outline-light" data-link-profile href="profile.html">Perfil</a>
+          <a class="btn btn-sm btn-outline-light" data-btn-login href="login.html">Iniciar sesión</a>
+          <button class="btn btn-sm btn-primary d-none" data-btn-logout>Cerrar sesión</button>
+          <a class="btn btn-sm btn-primary" href="cart.html">🛒 Carrito</a>
+        </div>
+      </div>
+    </div>
+  </nav>
+
+  <main class="container py-5" style="max-width:480px">
+    <h2 class="mb-4">Iniciar sesión</h2>
+    <form id="formLogin" novalidate>
+      <!-- comentario estudiante: el email debe tener formato válido -->
+      <div class="mb-3">
+        <label class="form-label">Email</label>
+        <input name="email" type="email" class="form-control" required>
+        <div class="form-text">Ej: gamer@vg.cl</div>
+      </div>
+      <!-- comentario estudiante: la pass no se muestra por seguridad -->
+      <div class="mb-3">
+        <label class="form-label">Contraseña</label>
+        <input name="pass" type="password" class="form-control" required>
+      </div>
+      <button class="btn btn-primary w-100">Entrar</button>
+    </form>
+    <div class="mt-3 d-flex justify-content-between">
+      <a href="register.html">Crear cuenta</a>
+      <a href="forgot.html">Olvidé mi contraseña</a>
+    </div>
+    <hr class="my-4">
+    <div class="small text-muted">Demo: admin@vg.cl / Admin123! — gamer@vg.cl / Gamer123!</div>
+  </main>
+
+  <footer class="py-4 border-top border-light-subtle">
+    <div class="container small text-muted">© 2025 NeoGames.</div>
+  </footer>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="js/app.js"></script>
+</body>
+</html>

@@ -1,0 +1,82 @@
+/* Paleta grata: índigo + cian + gris suave con toques neón para botones */
+:root{
+  --brand-bg: #0f172a;        /* azul pizarra muy oscuro (fondo) */
+  --brand-card: #111827;      /* gris azulado oscuro para cards */
+  --brand-primary: #6366f1;   /* índigo (acciones principales) */
+  --brand-secondary: #22d3ee; /* cian (acento) */
+  --brand-text: #e5e7eb;      /* gris claro para texto */
+  --brand-muted: #9ca3af;     /* gris medio */
+}
+
+body{
+  background: linear-gradient(180deg, #0b1220 0%, var(--brand-bg) 100%);
+  color: var(--brand-text);
+}
+
+.navbar, .offcanvas, .dropdown-menu{
+  background-color: #0b1220 !important;
+}
+
+.nav-link, .navbar-brand{
+  color: var(--brand-text) !important;
+}
+
+.btn-primary{
+  background: var(--brand-primary);
+  border: none;
+}
+.btn-primary:hover{ filter: brightness(1.08); }
+
+.btn-outline-light{
+  border-color: var(--brand-text);
+  color: var(--brand-text);
+}
+.btn-outline-light:hover{
+  background: var(--brand-text);
+  color: #0b1220;
+}
+
+.card{
+  background: var(--brand-card);
+  border: 1px solid rgba(255,255,255,.08);
+  box-shadow: 0 10px 30px rgba(0,0,0,.35);
+}
+
+.form-control, .form-select{
+  background: #0b1325;
+  border-color: rgba(255,255,255,.12);
+  color: var(--brand-text);
+}
+.form-control:focus, .form-select:focus{
+  border-color: var(--brand-secondary);
+  box-shadow: 0 0 0 .25rem rgba(34,211,238,.2);
+}
+
+.badge.bg-secondary{
+  background: var(--brand-secondary) !important;
+  color: #0b1220;
+}
+
+a, .link{
+  color: var(--brand-secondary);
+  text-decoration: none;
+}
+a:hover{ text-decoration: underline; }
+
+/* Mini “chip” para roles / estados */
+.chip{
+  display:inline-block; padding:.25rem .5rem; border-radius:999px;
+  background: rgba(34,211,238,.12); color: var(--brand-secondary);
+  font-size: .8rem; border: 1px solid rgba(34,211,238,.35);
+}
+
+/* Tabla admin mejor contraste */
+.table{
+  color: var(--brand-text);
+}
+.table thead th{
+  border-bottom-color: rgba(255,255,255,.15);
+}
+.table tbody tr{
+  border-color: rgba(255,255,255,.08);
+}

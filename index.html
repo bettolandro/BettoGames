@@ -1,0 +1,62 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <title>BettoGames | Catálogo</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <!-- Bootstrap -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link href="css/styles.css" rel="stylesheet">
+</head>
+<body data-page="home">
+  <!-- Navbar -->
+  <!-- (pego el bloque de Navbar de arriba) -->
+  <nav class="navbar navbar-expand-lg border-bottom border-light-subtle">
+    <div class="container">
+      <a class="navbar-brand fw-bold" href="index.html">BettoGames</a>
+      <button class="navbar-toggler text-white" type="button" data-bs-toggle="collapse" data-bs-target="#nav">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div id="nav" class="collapse navbar-collapse">
+        <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+          <li class="nav-item"><a class="nav-link" href="index.html">Catálogo</a></li>
+          <li class="nav-item"><a class="nav-link d-none" data-link-admin href="admin.html">Admin</a></li>
+        </ul>
+        <div class="d-flex align-items-center gap-2">
+          <span class="chip">Usuario: <span data-user-name>Invitado</span></span>
+          <a class="btn btn-sm btn-outline-light" data-link-profile href="profile.html">Perfil</a>
+          <a class="btn btn-sm btn-outline-light" data-btn-login href="login.html">Iniciar sesión</a>
+          <button class="btn btn-sm btn-primary d-none" data-btn-logout>Cerrar sesión</button>
+          <a class="btn btn-sm btn-primary" href="cart.html">🛒 Carrito</a>
+        </div>
+      </div>
+    </div>
+  </nav>
+
+  <header class="py-5 border-bottom border-light-subtle">
+    <div class="container">
+      <h1 class="display-6 fw-bold">Catálogo de Videojuegos</h1>
+      <p class="text-muted">Explora, compara y lleva tus juegos favoritos.</p>
+      <div class="row g-2">
+        <div class="col-md-4">
+          <input id="txtSearch" class="form-control" placeholder="Buscar por título o descripción">
+        </div>
+        <div class="col-md-3">
+          <select id="filterCategory" class="form-select"></select>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <main class="container py-5">
+    <div id="gridProducts" class="row row-cols-1 row-cols-sm-2 row-cols-lg-3 row-cols-xxl-4 g-4"></div>
+  </main>
+
+  <footer class="py-4 border-top border-light-subtle">
+    <div class="container small text-muted">© 2025 NeoGames. Solo demo educativa.</div>
+  </footer>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="js/app.js"></script>
+</body>
+</html>
