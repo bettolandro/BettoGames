@@ -38,14 +38,38 @@ const LS = {
     LS.set('users', users);
   }
 
-  // // acá creo algunos juegos para el catálogo
+  // // acá creo algunos juegos para el catálogo (portadas corregidas)
   const products = LS.get('products', []);
   if(!products.length){
     const demo = [
-      {id: crypto.randomUUID(), title:"Elden Ring", price:44990, stock:10, category:"RPG", cover:"https://images.igdb.com/igdb/image/upload/t_cover_big/co4jni.webp", desc:"Acción RPG desafiante del mundo abierto de FromSoftware."},
-      {id: crypto.randomUUID(), title:"Hades II", price:34990, stock:12, category:"Roguelike", cover:"https://images.igdb.com/igdb/image/upload/t_cover_big/co8y6v.webp", desc:"Secuela del premiado roguelike con combate rápido y rejugable."},
-      {id: crypto.randomUUID(), title:"Spider-Man 2", price:55990, stock:8, category:"Acción", cover:"https://images.igdb.com/igdb/image/upload/t_cover_big/co7z2i.webp", desc:"Superhéroes, balanceos por la ciudad y narrativa cinemática."},
-      {id: crypto.randomUUID(), title:"Stardew Valley", price:12990, stock:30, category:"Simulación", cover:"https://images.igdb.com/igdb/image/upload/t_cover_big/co1r4f.webp", desc:"Granjas, amistad y muchas horas de paz pixel art."}
+      {
+        id: crypto.randomUUID(),
+        title:"Elden Ring",
+        price:44990, stock:10, category:"RPG",
+        cover:"img/elden-ring.jpg",
+        desc:"Acción RPG desafiante del mundo abierto de FromSoftware."
+      },
+      {
+        id: crypto.randomUUID(),
+        title:"Hades II",
+        price:34990, stock:12, category:"Roguelike",
+        cover:"img/hades2.jpg",
+        desc:"Secuela del premiado roguelike con combate rápido y rejugable."
+      },
+      {
+        id: crypto.randomUUID(),
+        title:"Spider-Man 2",
+        price:55990, stock:8, category:"Acción",
+        cover:"img/spiderman2.jpg",
+        desc:"Superhéroes, balanceos por la ciudad y narrativa cinemática."
+      },
+      {
+        id: crypto.randomUUID(),
+        title:"Stardew Valley",
+        price:12990, stock:30, category:"Simulación",
+        cover:"img/stardew.jpg",
+        desc:"Granjas, amistad y muchas horas de paz pixel art."
+      }
     ];
     LS.set('products', demo);
   }
@@ -232,13 +256,15 @@ function initHome(){
         const col = document.createElement('div');
         col.className = 'col';
         col.innerHTML = `
-          <div class="card h-100">
-            <img src="${p.cover}" class="card-img-top" alt="${p.title}">
+          <div class="card h-100 card-fixed">
+            <div class="card-cover">
+              <img src="${p.cover}" alt="${p.title}">
+            </div>
             <div class="card-body d-flex flex-column">
-              <h5 class="card-title">${p.title}</h5>
+              <h5 class="card-title mb-1">${p.title}</h5>
               <span class="badge bg-secondary mb-2">${p.category}</span>
-              <p class="card-text flex-grow-1">${p.desc}</p>
-              <div class="d-flex justify-content-between align-items-center">
+              <p class="card-text clamp-3">${p.desc}</p>
+              <div class="card-actions d-flex justify-content-between align-items-center pt-2">
                 <strong>$${p.price.toLocaleString('es-CL')}</strong>
                 <div>
                   <a href="product.html?id=${p.id}" class="btn btn-sm btn-outline-light me-2">Ver</a>
@@ -277,7 +303,9 @@ function initProduct(){
   wrap.innerHTML = `
     <div class="row g-4">
       <div class="col-md-6">
-        <img src="${p.cover}" class="img-fluid rounded" alt="${p.title}">
+        <div class="card-cover rounded">
+          <img src="${p.cover}" alt="${p.title}">
+        </div>
       </div>
       <div class="col-md-6">
         <h2>${p.title}</h2>
