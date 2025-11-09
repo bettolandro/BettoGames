@@ -42,28 +42,37 @@
   </nav>
 
   <main class="container py-5" style="max-width:480px">
-    <h2 class="mb-4">Iniciar sesión</h2>
+    <div class="text-center mb-4">
+      <!-- Logo grande y responsivo -->
+      <img src="img/logoBettoGames.png" alt="BettoGames" class="login-logo mb-3">
+      <h2 class="fw-bold">Iniciar sesión</h2>
+    </div>
+
     <form id="formLogin" novalidate>
-      <!-- comentario estudiante: el email debe tener formato válido -->
       <div class="mb-3">
         <label class="form-label">Email</label>
         <input name="email" type="email" class="form-control" required>
         <div class="form-text">Ej: gamer@vg.cl</div>
       </div>
-      <!-- comentario estudiante: la pass no se muestra por seguridad -->
+
       <div class="mb-3">
         <label class="form-label">Contraseña</label>
         <input name="pass" type="password" class="form-control" required>
       </div>
+
       <button class="btn btn-primary w-100">Entrar</button>
     </form>
+
     <div class="mt-3 d-flex justify-content-between">
       <a href="register.html">Crear cuenta</a>
       <a href="forgot.html">Olvidé mi contraseña</a>
     </div>
     <hr class="my-4">
-    <!-- <div class="small text-muted">Demo: admin@vg.cl / Admin123! — gamer@vg.cl / Gamer123!</div> -->
+    <!--<div class="small text-muted">
+      Demo: admin@vg.cl / Admin123! — gamer@vg.cl / Gamer123!
+    </div> -->
   </main>
+
 
   <footer class="py-4 border-top border-light-subtle">
     <div class="container small text-muted">© 2025 BettoGames.</div>

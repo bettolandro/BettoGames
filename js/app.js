@@ -412,7 +412,7 @@ function initRegister(){
     if(!res.rules.upper) msgs.push('• 1 mayúscula');
     if(!res.rules.number) msgs.push('• 1 número');
     if(!res.rules.special) msgs.push('• 1 carácter especial');
-    meter.textContent = msgs.length ? `Falta: ${msgs.join(', ')}` : 'Contraseña robusta ✅';
+    meter.textContent = msgs.length ? `Falta: ${msgs.join(', ')}` : 'Contraseña robusta';
     meter.style.color = msgs.length ? '#f87171' : '#22d3ee';
   }
   pass.addEventListener('input', updateMeter);
